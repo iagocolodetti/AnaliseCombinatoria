@@ -29,291 +29,291 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            this.tb_p = new System.Windows.Forms.TextBox();
-            this.bt_calcular = new System.Windows.Forms.Button();
-            this.lb_p = new System.Windows.Forms.Label();
-            this.lb_n = new System.Windows.Forms.Label();
-            this.tb_n = new System.Windows.Forms.TextBox();
-            this.rtb_resultados = new System.Windows.Forms.RichTextBox();
-            this.bt_limpar = new System.Windows.Forms.Button();
-            this.lb_info = new System.Windows.Forms.Label();
-            this.panel_permutacao_repeticao = new System.Windows.Forms.Panel();
-            this.rb_permutacao_repeticao = new System.Windows.Forms.RadioButton();
-            this.panel_combinacao_repeticao = new System.Windows.Forms.Panel();
-            this.rb_combinacao_repeticao = new System.Windows.Forms.RadioButton();
-            this.panel_arranjo_repeticao = new System.Windows.Forms.Panel();
-            this.rb_arranjo_repeticao = new System.Windows.Forms.RadioButton();
-            this.panel_combinacao_simples = new System.Windows.Forms.Panel();
-            this.rb_combinacao_simples = new System.Windows.Forms.RadioButton();
-            this.panel_arranjo_simples = new System.Windows.Forms.Panel();
-            this.rb_arranjo_simples = new System.Windows.Forms.RadioButton();
-            this.panel_permutacao_simples = new System.Windows.Forms.Panel();
-            this.rb_permutacao_simples = new System.Windows.Forms.RadioButton();
-            this.panel_permutacao_repeticao.SuspendLayout();
-            this.panel_combinacao_repeticao.SuspendLayout();
-            this.panel_arranjo_repeticao.SuspendLayout();
-            this.panel_combinacao_simples.SuspendLayout();
-            this.panel_arranjo_simples.SuspendLayout();
-            this.panel_permutacao_simples.SuspendLayout();
+            this.TbP = new System.Windows.Forms.TextBox();
+            this.BtCalcular = new System.Windows.Forms.Button();
+            this.LbP = new System.Windows.Forms.Label();
+            this.LbN = new System.Windows.Forms.Label();
+            this.TbN = new System.Windows.Forms.TextBox();
+            this.RtbResultados = new System.Windows.Forms.RichTextBox();
+            this.BtLimpar = new System.Windows.Forms.Button();
+            this.LbInfo = new System.Windows.Forms.Label();
+            this.PanelPermutacaoRepeticao = new System.Windows.Forms.Panel();
+            this.RbPermutacaoRepeticao = new System.Windows.Forms.RadioButton();
+            this.PanelCombinacaoRepeticao = new System.Windows.Forms.Panel();
+            this.RbCombinacaoRepeticao = new System.Windows.Forms.RadioButton();
+            this.PanelArranjoRepeticao = new System.Windows.Forms.Panel();
+            this.RbArranjoRepeticao = new System.Windows.Forms.RadioButton();
+            this.PanelCombinacaoSimples = new System.Windows.Forms.Panel();
+            this.RbCombinacaoSimples = new System.Windows.Forms.RadioButton();
+            this.PanelArranjoSimples = new System.Windows.Forms.Panel();
+            this.RbArranjoSimples = new System.Windows.Forms.RadioButton();
+            this.PanelPermutacaoSimples = new System.Windows.Forms.Panel();
+            this.RbPermutacaoSimples = new System.Windows.Forms.RadioButton();
+            this.PanelPermutacaoRepeticao.SuspendLayout();
+            this.PanelCombinacaoRepeticao.SuspendLayout();
+            this.PanelArranjoRepeticao.SuspendLayout();
+            this.PanelCombinacaoSimples.SuspendLayout();
+            this.PanelArranjoSimples.SuspendLayout();
+            this.PanelPermutacaoSimples.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tb_p
+            // TbP
             // 
-            this.tb_p.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_p.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_p.Location = new System.Drawing.Point(78, 440);
-            this.tb_p.Name = "tb_p";
-            this.tb_p.Size = new System.Drawing.Size(137, 26);
-            this.tb_p.TabIndex = 12;
+            this.TbP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbP.Location = new System.Drawing.Point(78, 440);
+            this.TbP.Name = "TbP";
+            this.TbP.Size = new System.Drawing.Size(137, 26);
+            this.TbP.TabIndex = 12;
             // 
-            // bt_calcular
+            // BtCalcular
             // 
-            this.bt_calcular.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_calcular.Location = new System.Drawing.Point(56, 519);
-            this.bt_calcular.Name = "bt_calcular";
-            this.bt_calcular.Size = new System.Drawing.Size(159, 29);
-            this.bt_calcular.TabIndex = 15;
-            this.bt_calcular.Text = "Calcular";
-            this.bt_calcular.UseVisualStyleBackColor = true;
-            this.bt_calcular.Click += new System.EventHandler(this.bt_calcular_Click);
+            this.BtCalcular.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtCalcular.Location = new System.Drawing.Point(56, 519);
+            this.BtCalcular.Name = "BtCalcular";
+            this.BtCalcular.Size = new System.Drawing.Size(159, 29);
+            this.BtCalcular.TabIndex = 15;
+            this.BtCalcular.Text = "Calcular";
+            this.BtCalcular.UseVisualStyleBackColor = true;
+            this.BtCalcular.Click += new System.EventHandler(this.BtCalcular_Click);
             // 
-            // lb_p
+            // LbP
             // 
-            this.lb_p.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_p.AutoSize = true;
-            this.lb_p.Location = new System.Drawing.Point(52, 443);
-            this.lb_p.Name = "lb_p";
-            this.lb_p.Size = new System.Drawing.Size(22, 20);
-            this.lb_p.TabIndex = 11;
-            this.lb_p.Text = "p:";
+            this.LbP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LbP.AutoSize = true;
+            this.LbP.Location = new System.Drawing.Point(52, 443);
+            this.LbP.Name = "LbP";
+            this.LbP.Size = new System.Drawing.Size(22, 20);
+            this.LbP.TabIndex = 11;
+            this.LbP.Text = "p:";
             // 
-            // lb_n
+            // LbN
             // 
-            this.lb_n.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_n.AutoSize = true;
-            this.lb_n.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_n.Location = new System.Drawing.Point(52, 483);
-            this.lb_n.Name = "lb_n";
-            this.lb_n.Size = new System.Drawing.Size(22, 20);
-            this.lb_n.TabIndex = 13;
-            this.lb_n.Text = "n:";
+            this.LbN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LbN.AutoSize = true;
+            this.LbN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbN.Location = new System.Drawing.Point(52, 483);
+            this.LbN.Name = "LbN";
+            this.LbN.Size = new System.Drawing.Size(22, 20);
+            this.LbN.TabIndex = 13;
+            this.LbN.Text = "n:";
             // 
-            // tb_n
+            // TbN
             // 
-            this.tb_n.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_n.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_n.Location = new System.Drawing.Point(78, 480);
-            this.tb_n.Name = "tb_n";
-            this.tb_n.Size = new System.Drawing.Size(137, 26);
-            this.tb_n.TabIndex = 14;
+            this.TbN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TbN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbN.Location = new System.Drawing.Point(78, 480);
+            this.TbN.Name = "TbN";
+            this.TbN.Size = new System.Drawing.Size(137, 26);
+            this.TbN.TabIndex = 14;
             // 
-            // rtb_resultados
+            // RtbResultados
             // 
-            this.rtb_resultados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtb_resultados.BackColor = System.Drawing.SystemColors.Control;
-            this.rtb_resultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.rtb_resultados.Location = new System.Drawing.Point(290, 436);
-            this.rtb_resultados.Name = "rtb_resultados";
-            this.rtb_resultados.ReadOnly = true;
-            this.rtb_resultados.Size = new System.Drawing.Size(563, 173);
-            this.rtb_resultados.TabIndex = 16;
-            this.rtb_resultados.Text = "";
-            this.rtb_resultados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtb_resultados_KeyDown);
+            this.RtbResultados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RtbResultados.BackColor = System.Drawing.SystemColors.Control;
+            this.RtbResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.RtbResultados.Location = new System.Drawing.Point(290, 436);
+            this.RtbResultados.Name = "RtbResultados";
+            this.RtbResultados.ReadOnly = true;
+            this.RtbResultados.Size = new System.Drawing.Size(563, 173);
+            this.RtbResultados.TabIndex = 16;
+            this.RtbResultados.Text = "";
+            this.RtbResultados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RtbResultados_KeyDown);
             // 
-            // bt_limpar
+            // BtLimpar
             // 
-            this.bt_limpar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_limpar.Location = new System.Drawing.Point(49, 580);
-            this.bt_limpar.Name = "bt_limpar";
-            this.bt_limpar.Size = new System.Drawing.Size(173, 29);
-            this.bt_limpar.TabIndex = 17;
-            this.bt_limpar.Text = "Limpar Resultados";
-            this.bt_limpar.UseVisualStyleBackColor = true;
-            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
+            this.BtLimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtLimpar.Location = new System.Drawing.Point(49, 580);
+            this.BtLimpar.Name = "BtLimpar";
+            this.BtLimpar.Size = new System.Drawing.Size(173, 29);
+            this.BtLimpar.TabIndex = 17;
+            this.BtLimpar.Text = "Limpar Resultados";
+            this.BtLimpar.UseVisualStyleBackColor = true;
+            this.BtLimpar.Click += new System.EventHandler(this.BtLimpar_Click);
             // 
-            // lb_info
+            // LbInfo
             // 
-            this.lb_info.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_info.AutoSize = true;
-            this.lb_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_info.Location = new System.Drawing.Point(67, 9);
-            this.lb_info.Name = "lb_info";
-            this.lb_info.Size = new System.Drawing.Size(727, 18);
-            this.lb_info.TabIndex = 0;
-            this.lb_info.Text = "* p = número de elementos escolhidos   /   p,p,... = número de repetições   /   n" +
+            this.LbInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LbInfo.AutoSize = true;
+            this.LbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbInfo.Location = new System.Drawing.Point(67, 9);
+            this.LbInfo.Name = "LbInfo";
+            this.LbInfo.Size = new System.Drawing.Size(727, 18);
+            this.LbInfo.TabIndex = 0;
+            this.LbInfo.Text = "* p = número de elementos escolhidos   /   p,p,... = número de repetições   /   n" +
     " = número total de elementos *";
             // 
-            // panel_permutacao_repeticao
+            // PanelPermutacaoRepeticao
             // 
-            this.panel_permutacao_repeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_permutacao_repeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.permutacaocomrepeticao;
-            this.panel_permutacao_repeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_permutacao_repeticao.Controls.Add(this.rb_permutacao_repeticao);
-            this.panel_permutacao_repeticao.Location = new System.Drawing.Point(292, 46);
-            this.panel_permutacao_repeticao.Name = "panel_permutacao_repeticao";
-            this.panel_permutacao_repeticao.Size = new System.Drawing.Size(280, 190);
-            this.panel_permutacao_repeticao.TabIndex = 18;
-            this.panel_permutacao_repeticao.Click += new System.EventHandler(this.panel_permutacao_repeticao_Click);
+            this.PanelPermutacaoRepeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelPermutacaoRepeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.permutacaocomrepeticao;
+            this.PanelPermutacaoRepeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelPermutacaoRepeticao.Controls.Add(this.RbPermutacaoRepeticao);
+            this.PanelPermutacaoRepeticao.Location = new System.Drawing.Point(292, 46);
+            this.PanelPermutacaoRepeticao.Name = "PanelPermutacaoRepeticao";
+            this.PanelPermutacaoRepeticao.Size = new System.Drawing.Size(280, 190);
+            this.PanelPermutacaoRepeticao.TabIndex = 18;
+            this.PanelPermutacaoRepeticao.Click += new System.EventHandler(this.PanelPermutacaoRepeticao_Click);
             // 
-            // rb_permutacao_repeticao
+            // RbPermutacaoRepeticao
             // 
-            this.rb_permutacao_repeticao.AutoSize = true;
-            this.rb_permutacao_repeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_permutacao_repeticao.Location = new System.Drawing.Point(9, 145);
-            this.rb_permutacao_repeticao.Name = "rb_permutacao_repeticao";
-            this.rb_permutacao_repeticao.Size = new System.Drawing.Size(261, 28);
-            this.rb_permutacao_repeticao.TabIndex = 0;
-            this.rb_permutacao_repeticao.TabStop = true;
-            this.rb_permutacao_repeticao.Text = "Permutação com Repetição";
-            this.rb_permutacao_repeticao.UseVisualStyleBackColor = true;
-            this.rb_permutacao_repeticao.Click += new System.EventHandler(this.rb_permutacao_repeticao_Click);
+            this.RbPermutacaoRepeticao.AutoSize = true;
+            this.RbPermutacaoRepeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbPermutacaoRepeticao.Location = new System.Drawing.Point(9, 145);
+            this.RbPermutacaoRepeticao.Name = "RbPermutacaoRepeticao";
+            this.RbPermutacaoRepeticao.Size = new System.Drawing.Size(261, 28);
+            this.RbPermutacaoRepeticao.TabIndex = 0;
+            this.RbPermutacaoRepeticao.TabStop = true;
+            this.RbPermutacaoRepeticao.Text = "Permutação com Repetição";
+            this.RbPermutacaoRepeticao.UseVisualStyleBackColor = true;
+            this.RbPermutacaoRepeticao.Click += new System.EventHandler(this.RbPermutacaoRepeticao_Click);
             // 
-            // panel_combinacao_repeticao
+            // PanelCombinacaoRepeticao
             // 
-            this.panel_combinacao_repeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_combinacao_repeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.combinacaocomrepeticao;
-            this.panel_combinacao_repeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_combinacao_repeticao.Controls.Add(this.rb_combinacao_repeticao);
-            this.panel_combinacao_repeticao.Location = new System.Drawing.Point(571, 235);
-            this.panel_combinacao_repeticao.Name = "panel_combinacao_repeticao";
-            this.panel_combinacao_repeticao.Size = new System.Drawing.Size(280, 190);
-            this.panel_combinacao_repeticao.TabIndex = 9;
-            this.panel_combinacao_repeticao.Click += new System.EventHandler(this.panel_combinacao_repeticao_Click);
+            this.PanelCombinacaoRepeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelCombinacaoRepeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.combinacaocomrepeticao;
+            this.PanelCombinacaoRepeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelCombinacaoRepeticao.Controls.Add(this.RbCombinacaoRepeticao);
+            this.PanelCombinacaoRepeticao.Location = new System.Drawing.Point(571, 235);
+            this.PanelCombinacaoRepeticao.Name = "PanelCombinacaoRepeticao";
+            this.PanelCombinacaoRepeticao.Size = new System.Drawing.Size(280, 190);
+            this.PanelCombinacaoRepeticao.TabIndex = 9;
+            this.PanelCombinacaoRepeticao.Click += new System.EventHandler(this.PanelCombinacaoRepeticao_Click);
             // 
-            // rb_combinacao_repeticao
+            // RbCombinacaoRepeticao
             // 
-            this.rb_combinacao_repeticao.AutoSize = true;
-            this.rb_combinacao_repeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_combinacao_repeticao.Location = new System.Drawing.Point(6, 145);
-            this.rb_combinacao_repeticao.Name = "rb_combinacao_repeticao";
-            this.rb_combinacao_repeticao.Size = new System.Drawing.Size(267, 28);
-            this.rb_combinacao_repeticao.TabIndex = 10;
-            this.rb_combinacao_repeticao.TabStop = true;
-            this.rb_combinacao_repeticao.Text = "Combinação com Repetição";
-            this.rb_combinacao_repeticao.UseVisualStyleBackColor = true;
-            this.rb_combinacao_repeticao.Click += new System.EventHandler(this.rb_combinacao_repeticao_Click);
+            this.RbCombinacaoRepeticao.AutoSize = true;
+            this.RbCombinacaoRepeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbCombinacaoRepeticao.Location = new System.Drawing.Point(6, 145);
+            this.RbCombinacaoRepeticao.Name = "RbCombinacaoRepeticao";
+            this.RbCombinacaoRepeticao.Size = new System.Drawing.Size(267, 28);
+            this.RbCombinacaoRepeticao.TabIndex = 10;
+            this.RbCombinacaoRepeticao.TabStop = true;
+            this.RbCombinacaoRepeticao.Text = "Combinação com Repetição";
+            this.RbCombinacaoRepeticao.UseVisualStyleBackColor = true;
+            this.RbCombinacaoRepeticao.Click += new System.EventHandler(this.RbCombinacaoRepeticao_Click);
             // 
-            // panel_arranjo_repeticao
+            // PanelArranjoRepeticao
             // 
-            this.panel_arranjo_repeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_arranjo_repeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.arranjocomrepeticao;
-            this.panel_arranjo_repeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_arranjo_repeticao.Controls.Add(this.rb_arranjo_repeticao);
-            this.panel_arranjo_repeticao.Location = new System.Drawing.Point(13, 235);
-            this.panel_arranjo_repeticao.Name = "panel_arranjo_repeticao";
-            this.panel_arranjo_repeticao.Size = new System.Drawing.Size(280, 190);
-            this.panel_arranjo_repeticao.TabIndex = 5;
-            this.panel_arranjo_repeticao.Click += new System.EventHandler(this.panel_arranjo_repeticao_Click);
+            this.PanelArranjoRepeticao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelArranjoRepeticao.BackgroundImage = global::Análise_Combinatória.Properties.Resources.arranjocomrepeticao;
+            this.PanelArranjoRepeticao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelArranjoRepeticao.Controls.Add(this.RbArranjoRepeticao);
+            this.PanelArranjoRepeticao.Location = new System.Drawing.Point(13, 235);
+            this.PanelArranjoRepeticao.Name = "PanelArranjoRepeticao";
+            this.PanelArranjoRepeticao.Size = new System.Drawing.Size(280, 190);
+            this.PanelArranjoRepeticao.TabIndex = 5;
+            this.PanelArranjoRepeticao.Click += new System.EventHandler(this.PanelArranjoRepeticao_Click);
             // 
-            // rb_arranjo_repeticao
+            // RbArranjoRepeticao
             // 
-            this.rb_arranjo_repeticao.AutoSize = true;
-            this.rb_arranjo_repeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_arranjo_repeticao.Location = new System.Drawing.Point(30, 145);
-            this.rb_arranjo_repeticao.Name = "rb_arranjo_repeticao";
-            this.rb_arranjo_repeticao.Size = new System.Drawing.Size(221, 28);
-            this.rb_arranjo_repeticao.TabIndex = 6;
-            this.rb_arranjo_repeticao.TabStop = true;
-            this.rb_arranjo_repeticao.Text = "Arranjo com Repetição";
-            this.rb_arranjo_repeticao.UseVisualStyleBackColor = true;
-            this.rb_arranjo_repeticao.Click += new System.EventHandler(this.rb_arranjo_repeticao_Click);
+            this.RbArranjoRepeticao.AutoSize = true;
+            this.RbArranjoRepeticao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbArranjoRepeticao.Location = new System.Drawing.Point(30, 145);
+            this.RbArranjoRepeticao.Name = "RbArranjoRepeticao";
+            this.RbArranjoRepeticao.Size = new System.Drawing.Size(221, 28);
+            this.RbArranjoRepeticao.TabIndex = 6;
+            this.RbArranjoRepeticao.TabStop = true;
+            this.RbArranjoRepeticao.Text = "Arranjo com Repetição";
+            this.RbArranjoRepeticao.UseVisualStyleBackColor = true;
+            this.RbArranjoRepeticao.Click += new System.EventHandler(this.RbArranjoRepeticao_Click);
             // 
-            // panel_combinacao_simples
+            // PanelCombinacaoSimples
             // 
-            this.panel_combinacao_simples.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_combinacao_simples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.combinacaosimples;
-            this.panel_combinacao_simples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_combinacao_simples.Controls.Add(this.rb_combinacao_simples);
-            this.panel_combinacao_simples.Location = new System.Drawing.Point(292, 235);
-            this.panel_combinacao_simples.Name = "panel_combinacao_simples";
-            this.panel_combinacao_simples.Size = new System.Drawing.Size(280, 190);
-            this.panel_combinacao_simples.TabIndex = 7;
-            this.panel_combinacao_simples.Click += new System.EventHandler(this.panel_combinacao_simples_Click);
+            this.PanelCombinacaoSimples.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelCombinacaoSimples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.combinacaosimples;
+            this.PanelCombinacaoSimples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelCombinacaoSimples.Controls.Add(this.RbCombinacaoSimples);
+            this.PanelCombinacaoSimples.Location = new System.Drawing.Point(292, 235);
+            this.PanelCombinacaoSimples.Name = "PanelCombinacaoSimples";
+            this.PanelCombinacaoSimples.Size = new System.Drawing.Size(280, 190);
+            this.PanelCombinacaoSimples.TabIndex = 7;
+            this.PanelCombinacaoSimples.Click += new System.EventHandler(this.PanelCombinacaoSimples_Click);
             // 
-            // rb_combinacao_simples
+            // RbCombinacaoSimples
             // 
-            this.rb_combinacao_simples.AutoSize = true;
-            this.rb_combinacao_simples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_combinacao_simples.Location = new System.Drawing.Point(37, 145);
-            this.rb_combinacao_simples.Name = "rb_combinacao_simples";
-            this.rb_combinacao_simples.Size = new System.Drawing.Size(207, 28);
-            this.rb_combinacao_simples.TabIndex = 8;
-            this.rb_combinacao_simples.TabStop = true;
-            this.rb_combinacao_simples.Text = "Combinação Simples";
-            this.rb_combinacao_simples.UseVisualStyleBackColor = true;
-            this.rb_combinacao_simples.Click += new System.EventHandler(this.rb_combinacao_simples_Click);
+            this.RbCombinacaoSimples.AutoSize = true;
+            this.RbCombinacaoSimples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbCombinacaoSimples.Location = new System.Drawing.Point(37, 145);
+            this.RbCombinacaoSimples.Name = "RbCombinacaoSimples";
+            this.RbCombinacaoSimples.Size = new System.Drawing.Size(207, 28);
+            this.RbCombinacaoSimples.TabIndex = 8;
+            this.RbCombinacaoSimples.TabStop = true;
+            this.RbCombinacaoSimples.Text = "Combinação Simples";
+            this.RbCombinacaoSimples.UseVisualStyleBackColor = true;
+            this.RbCombinacaoSimples.Click += new System.EventHandler(this.RbCombinacaoSimples_Click);
             // 
-            // panel_arranjo_simples
+            // PanelArranjoSimples
             // 
-            this.panel_arranjo_simples.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_arranjo_simples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.arranjosimples;
-            this.panel_arranjo_simples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_arranjo_simples.Controls.Add(this.rb_arranjo_simples);
-            this.panel_arranjo_simples.Location = new System.Drawing.Point(571, 46);
-            this.panel_arranjo_simples.Name = "panel_arranjo_simples";
-            this.panel_arranjo_simples.Size = new System.Drawing.Size(280, 190);
-            this.panel_arranjo_simples.TabIndex = 3;
-            this.panel_arranjo_simples.Click += new System.EventHandler(this.panel_arranjo_simples_Click);
+            this.PanelArranjoSimples.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelArranjoSimples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.arranjosimples;
+            this.PanelArranjoSimples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelArranjoSimples.Controls.Add(this.RbArranjoSimples);
+            this.PanelArranjoSimples.Location = new System.Drawing.Point(571, 46);
+            this.PanelArranjoSimples.Name = "PanelArranjoSimples";
+            this.PanelArranjoSimples.Size = new System.Drawing.Size(280, 190);
+            this.PanelArranjoSimples.TabIndex = 3;
+            this.PanelArranjoSimples.Click += new System.EventHandler(this.PanelArranjoSimples_Click);
             // 
-            // rb_arranjo_simples
+            // RbArranjoSimples
             // 
-            this.rb_arranjo_simples.AutoSize = true;
-            this.rb_arranjo_simples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_arranjo_simples.Location = new System.Drawing.Point(58, 145);
-            this.rb_arranjo_simples.Name = "rb_arranjo_simples";
-            this.rb_arranjo_simples.Size = new System.Drawing.Size(161, 28);
-            this.rb_arranjo_simples.TabIndex = 4;
-            this.rb_arranjo_simples.TabStop = true;
-            this.rb_arranjo_simples.Text = "Arranjo Simples";
-            this.rb_arranjo_simples.UseVisualStyleBackColor = true;
-            this.rb_arranjo_simples.Click += new System.EventHandler(this.rb_arranjo_simples_Click);
+            this.RbArranjoSimples.AutoSize = true;
+            this.RbArranjoSimples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbArranjoSimples.Location = new System.Drawing.Point(58, 145);
+            this.RbArranjoSimples.Name = "RbArranjoSimples";
+            this.RbArranjoSimples.Size = new System.Drawing.Size(161, 28);
+            this.RbArranjoSimples.TabIndex = 4;
+            this.RbArranjoSimples.TabStop = true;
+            this.RbArranjoSimples.Text = "Arranjo Simples";
+            this.RbArranjoSimples.UseVisualStyleBackColor = true;
+            this.RbArranjoSimples.Click += new System.EventHandler(this.RbArranjoSimples_Click);
             // 
-            // panel_permutacao_simples
+            // PanelPermutacaoSimples
             // 
-            this.panel_permutacao_simples.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel_permutacao_simples.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_permutacao_simples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.permutacaosimples;
-            this.panel_permutacao_simples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_permutacao_simples.Controls.Add(this.rb_permutacao_simples);
-            this.panel_permutacao_simples.Location = new System.Drawing.Point(13, 46);
-            this.panel_permutacao_simples.Name = "panel_permutacao_simples";
-            this.panel_permutacao_simples.Size = new System.Drawing.Size(280, 190);
-            this.panel_permutacao_simples.TabIndex = 1;
-            this.panel_permutacao_simples.Click += new System.EventHandler(this.panel_permutacao_simples_Click);
+            this.PanelPermutacaoSimples.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelPermutacaoSimples.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelPermutacaoSimples.BackgroundImage = global::Análise_Combinatória.Properties.Resources.permutacaosimples;
+            this.PanelPermutacaoSimples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelPermutacaoSimples.Controls.Add(this.RbPermutacaoSimples);
+            this.PanelPermutacaoSimples.Location = new System.Drawing.Point(13, 46);
+            this.PanelPermutacaoSimples.Name = "PanelPermutacaoSimples";
+            this.PanelPermutacaoSimples.Size = new System.Drawing.Size(280, 190);
+            this.PanelPermutacaoSimples.TabIndex = 1;
+            this.PanelPermutacaoSimples.Click += new System.EventHandler(this.PanelPermutacaoSimples_Click);
             // 
-            // rb_permutacao_simples
+            // RbPermutacaoSimples
             // 
-            this.rb_permutacao_simples.AutoSize = true;
-            this.rb_permutacao_simples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_permutacao_simples.Location = new System.Drawing.Point(37, 145);
-            this.rb_permutacao_simples.Name = "rb_permutacao_simples";
-            this.rb_permutacao_simples.Size = new System.Drawing.Size(201, 28);
-            this.rb_permutacao_simples.TabIndex = 2;
-            this.rb_permutacao_simples.TabStop = true;
-            this.rb_permutacao_simples.Text = "Permutação Simples";
-            this.rb_permutacao_simples.UseVisualStyleBackColor = true;
-            this.rb_permutacao_simples.Click += new System.EventHandler(this.rb_permutacao_simples_Click);
+            this.RbPermutacaoSimples.AutoSize = true;
+            this.RbPermutacaoSimples.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbPermutacaoSimples.Location = new System.Drawing.Point(37, 145);
+            this.RbPermutacaoSimples.Name = "RbPermutacaoSimples";
+            this.RbPermutacaoSimples.Size = new System.Drawing.Size(201, 28);
+            this.RbPermutacaoSimples.TabIndex = 2;
+            this.RbPermutacaoSimples.TabStop = true;
+            this.RbPermutacaoSimples.Text = "Permutação Simples";
+            this.RbPermutacaoSimples.UseVisualStyleBackColor = true;
+            this.RbPermutacaoSimples.Click += new System.EventHandler(this.RbPermutacaoSimples_Click);
             // 
             // FormPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(864, 621);
-            this.Controls.Add(this.panel_permutacao_repeticao);
-            this.Controls.Add(this.panel_combinacao_repeticao);
-            this.Controls.Add(this.panel_arranjo_repeticao);
-            this.Controls.Add(this.lb_info);
-            this.Controls.Add(this.bt_limpar);
-            this.Controls.Add(this.rtb_resultados);
-            this.Controls.Add(this.lb_n);
-            this.Controls.Add(this.lb_p);
-            this.Controls.Add(this.panel_combinacao_simples);
-            this.Controls.Add(this.panel_arranjo_simples);
-            this.Controls.Add(this.panel_permutacao_simples);
-            this.Controls.Add(this.bt_calcular);
-            this.Controls.Add(this.tb_n);
-            this.Controls.Add(this.tb_p);
+            this.Controls.Add(this.PanelPermutacaoRepeticao);
+            this.Controls.Add(this.PanelCombinacaoRepeticao);
+            this.Controls.Add(this.PanelArranjoRepeticao);
+            this.Controls.Add(this.LbInfo);
+            this.Controls.Add(this.BtLimpar);
+            this.Controls.Add(this.RtbResultados);
+            this.Controls.Add(this.LbN);
+            this.Controls.Add(this.LbP);
+            this.Controls.Add(this.PanelCombinacaoSimples);
+            this.Controls.Add(this.PanelArranjoSimples);
+            this.Controls.Add(this.PanelPermutacaoSimples);
+            this.Controls.Add(this.BtCalcular);
+            this.Controls.Add(this.TbN);
+            this.Controls.Add(this.TbP);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -323,18 +323,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Análise Combinatória";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
-            this.panel_permutacao_repeticao.ResumeLayout(false);
-            this.panel_permutacao_repeticao.PerformLayout();
-            this.panel_combinacao_repeticao.ResumeLayout(false);
-            this.panel_combinacao_repeticao.PerformLayout();
-            this.panel_arranjo_repeticao.ResumeLayout(false);
-            this.panel_arranjo_repeticao.PerformLayout();
-            this.panel_combinacao_simples.ResumeLayout(false);
-            this.panel_combinacao_simples.PerformLayout();
-            this.panel_arranjo_simples.ResumeLayout(false);
-            this.panel_arranjo_simples.PerformLayout();
-            this.panel_permutacao_simples.ResumeLayout(false);
-            this.panel_permutacao_simples.PerformLayout();
+            this.PanelPermutacaoRepeticao.ResumeLayout(false);
+            this.PanelPermutacaoRepeticao.PerformLayout();
+            this.PanelCombinacaoRepeticao.ResumeLayout(false);
+            this.PanelCombinacaoRepeticao.PerformLayout();
+            this.PanelArranjoRepeticao.ResumeLayout(false);
+            this.PanelArranjoRepeticao.PerformLayout();
+            this.PanelCombinacaoSimples.ResumeLayout(false);
+            this.PanelCombinacaoSimples.PerformLayout();
+            this.PanelArranjoSimples.ResumeLayout(false);
+            this.PanelArranjoSimples.PerformLayout();
+            this.PanelPermutacaoSimples.ResumeLayout(false);
+            this.PanelPermutacaoSimples.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,26 +342,26 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tb_p;
-        private System.Windows.Forms.Button bt_calcular;
-        private System.Windows.Forms.Panel panel_permutacao_simples;
-        private System.Windows.Forms.Panel panel_arranjo_simples;
-        private System.Windows.Forms.Panel panel_combinacao_simples;
-        private System.Windows.Forms.RadioButton rb_combinacao_simples;
-        private System.Windows.Forms.RadioButton rb_arranjo_simples;
-        private System.Windows.Forms.RadioButton rb_permutacao_simples;
-        private System.Windows.Forms.Label lb_p;
-        private System.Windows.Forms.Label lb_n;
-        private System.Windows.Forms.TextBox tb_n;
-        private System.Windows.Forms.RichTextBox rtb_resultados;
-        private System.Windows.Forms.Button bt_limpar;
-        private System.Windows.Forms.Label lb_info;
-        private System.Windows.Forms.Panel panel_arranjo_repeticao;
-        private System.Windows.Forms.RadioButton rb_arranjo_repeticao;
-        private System.Windows.Forms.Panel panel_combinacao_repeticao;
-        private System.Windows.Forms.RadioButton rb_combinacao_repeticao;
-        private System.Windows.Forms.Panel panel_permutacao_repeticao;
-        private System.Windows.Forms.RadioButton rb_permutacao_repeticao;
+        private System.Windows.Forms.TextBox TbP;
+        private System.Windows.Forms.Button BtCalcular;
+        private System.Windows.Forms.Panel PanelPermutacaoSimples;
+        private System.Windows.Forms.Panel PanelArranjoSimples;
+        private System.Windows.Forms.Panel PanelCombinacaoSimples;
+        private System.Windows.Forms.RadioButton RbCombinacaoSimples;
+        private System.Windows.Forms.RadioButton RbArranjoSimples;
+        private System.Windows.Forms.RadioButton RbPermutacaoSimples;
+        private System.Windows.Forms.Label LbP;
+        private System.Windows.Forms.Label LbN;
+        private System.Windows.Forms.TextBox TbN;
+        private System.Windows.Forms.RichTextBox RtbResultados;
+        private System.Windows.Forms.Button BtLimpar;
+        private System.Windows.Forms.Label LbInfo;
+        private System.Windows.Forms.Panel PanelArranjoRepeticao;
+        private System.Windows.Forms.RadioButton RbArranjoRepeticao;
+        private System.Windows.Forms.Panel PanelCombinacaoRepeticao;
+        private System.Windows.Forms.RadioButton RbCombinacaoRepeticao;
+        private System.Windows.Forms.Panel PanelPermutacaoRepeticao;
+        private System.Windows.Forms.RadioButton RbPermutacaoRepeticao;
     }
 }
 

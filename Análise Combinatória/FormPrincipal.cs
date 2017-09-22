@@ -8,80 +8,29 @@ namespace Análise_Combinatória
 {
     public partial class FormPrincipal : Form
     {
+        AnaliseCombinatoria ac = null;
+
         public FormPrincipal()
         {
             InitializeComponent();
+            ac = new AnaliseCombinatoria();
         }
 
-        private int MaxNumber = 100;
+        private const int MAX_NUMBER = 100;
         private int TipoSelecionado = 0;
 
-        #region Funções
-        public BigInteger Fatorial(int n)
-        {
-            if (n < 0) return 0;
-            else if (n == 0) return 1;
-            else if (n == 1) return n;
-            else return (n * Fatorial(n - 1));
-        }
-
-        public BigInteger PermutacaoSimples(int n)
-        {
-            return Fatorial(n);
-        }
-
-        public BigInteger PermutacaoRepeticao(int n, int[] p)
-        {
-            if (n < p.Sum()) return 0;
-            BigInteger resultado, pp = 1;
-            for (int i = 0; i < p.Length; i++) pp *= Fatorial(p[i]);
-            resultado = (Fatorial(n) / pp);
-            if (resultado < 0) resultado = 0;
-            return resultado;
-        }
-
-        public BigInteger ArranjoSimples(int n, int p)
-        {
-            if (n < p) return 0;
-            BigInteger resultado = (Fatorial(n) / Fatorial(n - p));
-            if (resultado < 0) resultado = 0;
-            return resultado;
-        }
-        
-        public BigInteger ArranjoRepeticao(int n, int p)
-        {
-            if (p < 0) return 0;
-            else if (p == 0) return 1;
-            else if (p == 1) return n;
-            else return (n * ArranjoRepeticao(n, p - 1));
-        }
-
-        public BigInteger CombinacaoSimples(int n, int p)
-        {
-            if (n < p) return 0;
-            BigInteger resultado = (Fatorial(n) / (Fatorial(n - p) * Fatorial(p)));
-            if (resultado < 0) resultado = 0;
-            return resultado;
-        }
-
-        public BigInteger CombinacaoRepeticao(int n, int p)
-        {
-            BigInteger resultado = (Fatorial(n + p - 1) / (Fatorial(n - 1) * Fatorial(p)));
-            if (resultado < 0) resultado = 0;
-            return resultado;
-        }
-
-        public void RtbAddColorText(RichTextBox r, Color c, string s)
+        #region Métodos
+        private void RtbAddColorText(RichTextBox r, Color color, string text)
         {
             r.SelectionStart = r.Text.Length;
-            r.SelectionColor = c;
-            r.AppendText(s);
+            r.SelectionColor = color;
+            r.AppendText(text);
         }
 
-        private void RtbAddTextComResultado(RichTextBox r, string s, BigInteger resultado)
+        private void RtbAddTextComResultado(RichTextBox r, string text, BigInteger resultado)
         {
             RtbAddColorText(r, Color.Red, ">  ");
-            RtbAddColorText(r, Color.Black, s);
+            RtbAddColorText(r, Color.Black, text);
             RtbAddColorText(r, Color.Red, "    >    ");
             RtbAddColorText(r, Color.Blue, "R: " + resultado.ToString() + "\n");
         }
@@ -89,10 +38,10 @@ namespace Análise_Combinatória
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            rb_trocar(0);
+            RbTrocar(0);
         }
 
-        private void bt_calcular_Click(object sender, EventArgs e)
+        private void BtCalcular_Click(object sender, EventArgs e)
         {
             try
             {
@@ -101,25 +50,25 @@ namespace Análise_Combinatória
                 #region Tratamento de Erro
                 if (TipoSelecionado == 0)
                 {
-                    if (string.IsNullOrEmpty(tb_n.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(tb_n.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MaxNumber) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MaxNumber.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                 }
                 else if (TipoSelecionado == 1)
                 {
-                    if (string.IsNullOrEmpty(tb_p.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (string.IsNullOrEmpty(tb_n.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(tb_n.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MaxNumber) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a "  + MaxNumber.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbP.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a "  + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(tb_p.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (string.IsNullOrEmpty(tb_n.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(tb_p.Text, out p) == false) { MessageBox.Show("O valor do campo 'p' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (p < 1 || p > MaxNumber) { MessageBox.Show("O valor do campo 'p' deve ser um número inteiro positivo de 1 a " + MaxNumber.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(tb_n.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MaxNumber) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MaxNumber.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbP.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (int.TryParse(TbP.Text, out p) == false) { MessageBox.Show("O valor do campo 'p' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (p < 1 || p > MAX_NUMBER) { MessageBox.Show("O valor do campo 'p' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                     if ((TipoSelecionado != 3 && TipoSelecionado != 5) && n < p) { MessageBox.Show("O valor do campo 'p' deve ser menor ou igual ao valor do campo 'n'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                 }
                 #endregion
@@ -127,18 +76,18 @@ namespace Análise_Combinatória
                 switch (TipoSelecionado)
                 {
                     case 0:
-                        RtbAddTextComResultado(rtb_resultados, "P(n) => P(" + n.ToString() + ")", PermutacaoSimples(n));
+                        RtbAddTextComResultado(RtbResultados, "P(n) => P(" + n.ToString() + ")", ac.PermutacaoSimples(n));
                         break;
 
                     case 1:
                         string exibir = "P(n,(p,p,...)) => P(" + n.ToString() + ",(";
-                        string[] s = tb_p.Text.Split(',');
+                        string[] s = TbP.Text.Split(',');
                         int[] pp = new int[s.Length];
                         for (int i = 0; i < s.Length; i++)
                         {
                             #region Tratamento de Erro (p por p)
                             if (int.TryParse(s[i], out p) == false) { MessageBox.Show("Um valor do campo 'p' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                            if (p < 1 || p > MaxNumber) { MessageBox.Show("Os valores do campo 'p' devem ser números inteiros positivos de 1 a " + MaxNumber.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                            if (p < 1 || p > MAX_NUMBER) { MessageBox.Show("Os valores do campo 'p' devem ser números inteiros positivos de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                             #endregion
                             if (i == 0) exibir += p.ToString();
                             else exibir += "," + p.ToString();
@@ -147,30 +96,30 @@ namespace Análise_Combinatória
                         #region Tratamento de Erro
                         if(n < pp.Sum()) { MessageBox.Show("O valor total do campo 'p' deve ser menor ou igual ao valor do campo 'n'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                         #endregion
-                        RtbAddTextComResultado(rtb_resultados, exibir + "))", PermutacaoRepeticao(n, pp));
+                        RtbAddTextComResultado(RtbResultados, exibir + "))", ac.PermutacaoRepeticao(n, pp));
                         break;
 
                     case 2:
-                        RtbAddTextComResultado(rtb_resultados, "A(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ArranjoSimples(n, p));
+                        RtbAddTextComResultado(RtbResultados, "A(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ac.ArranjoSimples(n, p));
                         break;
 
                     case 3:
-                        RtbAddTextComResultado(rtb_resultados, "AR(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ArranjoRepeticao(n, p));
+                        RtbAddTextComResultado(RtbResultados, "AR(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ac.ArranjoRepeticao(n, p));
                         break;
 
                     case 4:
-                        RtbAddTextComResultado(rtb_resultados, "C(n,p) => C(" + n.ToString() + "," + p.ToString() + ")", CombinacaoSimples(n, p));
+                        RtbAddTextComResultado(RtbResultados, "C(n,p) => C(" + n.ToString() + "," + p.ToString() + ")", ac.CombinacaoSimples(n, p));
                         break;
 
                     case 5:
-                        RtbAddTextComResultado(rtb_resultados, "CR(n,p) => CR(" + n.ToString() + "," + p.ToString() + ")", CombinacaoRepeticao(n, p));
+                        RtbAddTextComResultado(RtbResultados, "CR(n,p) => CR(" + n.ToString() + "," + p.ToString() + ")", ac.CombinacaoRepeticao(n, p));
                         break;
 
                     default:
                         MessageBox.Show("Não foi possível calcular.\nO tipo não foi selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
-                rtb_resultados.ScrollToCaret();
+                RtbResultados.ScrollToCaret();
             }
             catch
             {
@@ -178,98 +127,98 @@ namespace Análise_Combinatória
             }
         }
 
-        private void bt_limpar_Click(object sender, EventArgs e)
+        private void BtLimpar_Click(object sender, EventArgs e)
         {
-            rtb_resultados.Clear();
+            RtbResultados.Clear();
         }
 
-        private void rtb_resultados_KeyDown(object sender, KeyEventArgs e)
+        private void RtbResultados_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
                 if (e.Modifiers == Keys.Control)
                 {
-                    if (e.KeyCode == Keys.Oemplus) rtb_resultados.ZoomFactor += 0.1f;
-                    else if (e.KeyCode == Keys.OemMinus) rtb_resultados.ZoomFactor -= 0.1f;
-                    else if (e.KeyCode == Keys.D0) rtb_resultados.ZoomFactor = 1.0f;
+                    if (e.KeyCode == Keys.Oemplus) RtbResultados.ZoomFactor += 0.1f;
+                    else if (e.KeyCode == Keys.OemMinus) RtbResultados.ZoomFactor -= 0.1f;
+                    else if (e.KeyCode == Keys.D0) RtbResultados.ZoomFactor = 1.0f;
                 }
             }
             catch { }
         }
 
         #region Troca de tipos
-        private void rb_trocar(int tipo)
+        private void RbTrocar(int tipo)
         {
             if (tipo < 0 || tipo > 5) tipo = 0;
 
-            if (tipo == 0) { lb_p.Enabled = false; tb_p.Enabled = false; }
-            else { lb_p.Enabled = true; tb_p.Enabled = true; }
+            if (tipo == 0) { LbP.Enabled = false; TbP.Enabled = false; }
+            else { LbP.Enabled = true; TbP.Enabled = true; }
 
-            RadioButton[] rb_array = { rb_permutacao_simples, rb_permutacao_repeticao, rb_arranjo_simples, rb_arranjo_repeticao, rb_combinacao_simples, rb_combinacao_repeticao };
+            RadioButton[] rb_array = { RbPermutacaoSimples, RbPermutacaoRepeticao, RbArranjoSimples, RbArranjoRepeticao, RbCombinacaoSimples, RbCombinacaoRepeticao };
             rb_array[tipo].Checked = true;
             for (int i = 0; i < rb_array.Length; i++) if (i != tipo) rb_array[i].Checked = false;
 
             TipoSelecionado = tipo;
         }
 
-        private void rb_permutacao_simples_Click(object sender, EventArgs e)
+        private void RbPermutacaoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(0);
+            RbTrocar(0);
         }
 
-        private void rb_permutacao_repeticao_Click(object sender, EventArgs e)
+        private void RbPermutacaoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(1);
+            RbTrocar(1);
         }
 
-        private void rb_arranjo_simples_Click(object sender, EventArgs e)
+        private void RbArranjoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(2);
+            RbTrocar(2);
         }
 
-        private void rb_arranjo_repeticao_Click(object sender, EventArgs e)
+        private void RbArranjoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(3);
+            RbTrocar(3);
         }
 
-        private void rb_combinacao_simples_Click(object sender, EventArgs e)
+        private void RbCombinacaoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(4);
+            RbTrocar(4);
         }
 
-        private void rb_combinacao_repeticao_Click(object sender, EventArgs e)
+        private void RbCombinacaoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(5);
+            RbTrocar(5);
         }
 
-        private void panel_permutacao_simples_Click(object sender, EventArgs e)
+        private void PanelPermutacaoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(0);
+            RbTrocar(0);
         }
 
-        private void panel_permutacao_repeticao_Click(object sender, EventArgs e)
+        private void PanelPermutacaoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(1);
+            RbTrocar(1);
         }
 
-        private void panel_arranjo_simples_Click(object sender, EventArgs e)
+        private void PanelArranjoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(2);
+            RbTrocar(2);
         }
 
-        private void panel_arranjo_repeticao_Click(object sender, EventArgs e)
+        private void PanelArranjoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(3);
+            RbTrocar(3);
         }
 
-        private void panel_combinacao_simples_Click(object sender, EventArgs e)
+        private void PanelCombinacaoSimples_Click(object sender, EventArgs e)
         {
-            rb_trocar(4);
+            RbTrocar(4);
         }
 
-        private void panel_combinacao_repeticao_Click(object sender, EventArgs e)
+        private void PanelCombinacaoRepeticao_Click(object sender, EventArgs e)
         {
-            rb_trocar(5);
+            RbTrocar(5);
         }
         #endregion
     }
