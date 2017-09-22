@@ -20,6 +20,11 @@ namespace Análise_Combinatória
         private int TipoSelecionado = 0;
 
         #region Métodos
+        private void MsgBoxError(string text)
+        {
+            MessageBox.Show(text, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         private void RtbAddColorText(RichTextBox r, Color color, string text)
         {
             r.SelectionStart = r.Text.Length;
@@ -50,26 +55,26 @@ namespace Análise_Combinatória
                 #region Tratamento de Erro
                 if (TipoSelecionado == 0)
                 {
-                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
                 }
                 else if (TipoSelecionado == 1)
                 {
-                    if (string.IsNullOrEmpty(TbP.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a "  + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbP.Text) == true) { MsgBoxError("O campo 'p' está vazio."); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a "  + MAX_NUMBER.ToString() + "."); return; }
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(TbP.Text) == true) { MessageBox.Show("O campo 'p' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (string.IsNullOrEmpty(TbN.Text) == true) { MessageBox.Show("O campo 'n' está vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(TbP.Text, out p) == false) { MessageBox.Show("O valor do campo 'p' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (p < 1 || p > MAX_NUMBER) { MessageBox.Show("O valor do campo 'p' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (int.TryParse(TbN.Text, out n) == false) { MessageBox.Show("O valor do campo 'n' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MessageBox.Show("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if ((TipoSelecionado != 3 && TipoSelecionado != 5) && n < p) { MessageBox.Show("O valor do campo 'p' deve ser menor ou igual ao valor do campo 'n'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (string.IsNullOrEmpty(TbP.Text) == true) { MsgBoxError("O campo 'p' está vazio."); return; }
+                    if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
+                    if (int.TryParse(TbP.Text, out p) == false) { MsgBoxError("O valor do campo 'p' não é um inteiro."); return; }
+                    if (p < 1 || p > MAX_NUMBER) { MsgBoxError("O valor do campo 'p' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
+                    if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
+                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
+                    if ((TipoSelecionado != 3 && TipoSelecionado != 5) && n < p) { MsgBoxError("O valor do campo 'p' deve ser menor ou igual ao valor do campo 'n'."); return; }
                 }
                 #endregion
 
