@@ -8,15 +8,12 @@ namespace Análise_Combinatória
 {
     public partial class FormPrincipal : Form
     {
-        AnaliseCombinatoria ac = null;
-
         public FormPrincipal()
         {
             InitializeComponent();
-            ac = new AnaliseCombinatoria();
         }
 
-        private const int MAX_NUMBER = 100;
+        private const int MIN_NUMBER = 1, MAX_NUMBER = 100;
         private int TipoSelecionado = 0;
 
         #region Métodos
@@ -50,6 +47,8 @@ namespace Análise_Combinatória
         {
             try
             {
+                AnaliseCombinatoria AC = new AnaliseCombinatoria();
+
                 int n = 0, p = 0;
 
                 #region Tratamento de Erro
@@ -57,23 +56,23 @@ namespace Análise_Combinatória
                 {
                     if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
                     if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
+                    if (n < MIN_NUMBER || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de " + MIN_NUMBER.ToString() + " a " + MAX_NUMBER.ToString() + "."); return; }
                 }
                 else if (TipoSelecionado == 1)
                 {
                     if (string.IsNullOrEmpty(TbP.Text) == true) { MsgBoxError("O campo 'p' está vazio."); return; }
                     if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
                     if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a "  + MAX_NUMBER.ToString() + "."); return; }
+                    if (n < MIN_NUMBER || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de " + MIN_NUMBER.ToString() + " a "  + MAX_NUMBER.ToString() + "."); return; }
                 }
                 else
                 {
                     if (string.IsNullOrEmpty(TbP.Text) == true) { MsgBoxError("O campo 'p' está vazio."); return; }
                     if (string.IsNullOrEmpty(TbN.Text) == true) { MsgBoxError("O campo 'n' está vazio."); return; }
                     if (int.TryParse(TbP.Text, out p) == false) { MsgBoxError("O valor do campo 'p' não é um inteiro."); return; }
-                    if (p < 1 || p > MAX_NUMBER) { MsgBoxError("O valor do campo 'p' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
+                    if (p < MIN_NUMBER || p > MAX_NUMBER) { MsgBoxError("O valor do campo 'p' deve ser um número inteiro positivo de " + MIN_NUMBER.ToString() + " a " + MAX_NUMBER.ToString() + "."); return; }
                     if (int.TryParse(TbN.Text, out n) == false) { MsgBoxError("O valor do campo 'n' não é um inteiro."); return; }
-                    if (n < 1 || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de 1 a " + MAX_NUMBER.ToString() + "."); return; }
+                    if (n < MIN_NUMBER || n > MAX_NUMBER) { MsgBoxError("O valor do campo 'n' deve ser um número inteiro positivo de " + MIN_NUMBER.ToString() + " a " + MAX_NUMBER.ToString() + "."); return; }
                     if ((TipoSelecionado != 3 && TipoSelecionado != 5) && n < p) { MsgBoxError("O valor do campo 'p' deve ser menor ou igual ao valor do campo 'n'."); return; }
                 }
                 #endregion
@@ -81,7 +80,7 @@ namespace Análise_Combinatória
                 switch (TipoSelecionado)
                 {
                     case 0:
-                        RtbAddTextComResultado(RtbResultados, "P(n) => P(" + n.ToString() + ")", ac.PermutacaoSimples(n));
+                        RtbAddTextComResultado(RtbResultados, "P(n) => P(" + n.ToString() + ")", AC.PermutacaoSimples(n));
                         break;
 
                     case 1:
@@ -92,7 +91,7 @@ namespace Análise_Combinatória
                         {
                             #region Tratamento de Erro (p por p)
                             if (int.TryParse(s[i], out p) == false) { MessageBox.Show("Um valor do campo 'p' não é um inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                            if (p < 1 || p > MAX_NUMBER) { MessageBox.Show("Os valores do campo 'p' devem ser números inteiros positivos de 1 a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                            if (p < MIN_NUMBER || p > MAX_NUMBER) { MessageBox.Show("Os valores do campo 'p' devem ser números inteiros positivos de " + MIN_NUMBER.ToString() + " a " + MAX_NUMBER.ToString() + ".", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                             #endregion
                             if (i == 0) exibir += p.ToString();
                             else exibir += "," + p.ToString();
@@ -101,23 +100,23 @@ namespace Análise_Combinatória
                         #region Tratamento de Erro
                         if(n < pp.Sum()) { MessageBox.Show("O valor total do campo 'p' deve ser menor ou igual ao valor do campo 'n'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                         #endregion
-                        RtbAddTextComResultado(RtbResultados, exibir + "))", ac.PermutacaoRepeticao(n, pp));
+                        RtbAddTextComResultado(RtbResultados, exibir + "))", AC.PermutacaoRepeticao(n, pp));
                         break;
 
                     case 2:
-                        RtbAddTextComResultado(RtbResultados, "A(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ac.ArranjoSimples(n, p));
+                        RtbAddTextComResultado(RtbResultados, "A(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", AC.ArranjoSimples(n, p));
                         break;
 
                     case 3:
-                        RtbAddTextComResultado(RtbResultados, "AR(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", ac.ArranjoRepeticao(n, p));
+                        RtbAddTextComResultado(RtbResultados, "AR(n,p) => A(" + n.ToString() + "," + p.ToString() + ")", AC.ArranjoRepeticao(n, p));
                         break;
 
                     case 4:
-                        RtbAddTextComResultado(RtbResultados, "C(n,p) => C(" + n.ToString() + "," + p.ToString() + ")", ac.CombinacaoSimples(n, p));
+                        RtbAddTextComResultado(RtbResultados, "C(n,p) => C(" + n.ToString() + "," + p.ToString() + ")", AC.CombinacaoSimples(n, p));
                         break;
 
                     case 5:
-                        RtbAddTextComResultado(RtbResultados, "CR(n,p) => CR(" + n.ToString() + "," + p.ToString() + ")", ac.CombinacaoRepeticao(n, p));
+                        RtbAddTextComResultado(RtbResultados, "CR(n,p) => CR(" + n.ToString() + "," + p.ToString() + ")", AC.CombinacaoRepeticao(n, p));
                         break;
 
                     default:
